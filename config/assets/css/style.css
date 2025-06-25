@@ -1,0 +1,172 @@
+/* /config/assets/css/style.css - Versi Final yang Diperbaiki */
+
+/* 1. ROOT VARIABLES & COLOR PALETTE */
+:root {
+    --gw-primary: #8B4513;
+    --gw-primary-hover: #A0522D;
+    --gw-secondary: #6c757d;
+    --gw-success: #198754;
+    --gw-info: #0dcaf0;
+    --gw-danger: #dc3545;
+    --gw-warning: #ffc107;
+    --gw-light: #f8f9fa;
+    --gw-dark: #212529;
+    --gw-body-bg: #f4f7fc;
+    --gw-card-bg: #ffffff;
+    --gw-border-color: #dee2e6;
+    --gw-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --gw-font-family: 'Inter', sans-serif;
+}
+
+/* 2. BODY & GENERAL STYLES */
+body {
+    background-color: var(--gw-body-bg);
+    font-family: var(--gw-font-family);
+    color: #495057;
+}
+
+/* =================================================================== */
+/* PERBAIKAN UTAMA ADA DI BAGIAN INI                                   */
+/* Ini akan mendorong semua konten halaman ke bawah navbar secara benar */
+/* =================================================================== */
+.main-content {
+    margin-top: 72px; /* Memberikan ruang untuk navbar setinggi 72px */
+    padding: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: var(--gw-dark);
+}
+
+/* 3. NAVBAR */
+.navbar.bg-dark {
+    background-color: var(--gw-dark) !important;
+}
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+/* 4. OFFCANVAS (SIDEBAR) */
+.offcanvas {
+    background-color: var(--gw-card-bg);
+    color: var(--gw-dark);
+}
+.offcanvas-header {
+    background-color: var(--gw-light);
+}
+.sidebar-profile {
+    background-color: var(--gw-light);
+}
+
+/* Tautan Navigasi Sidebar */
+.offcanvas .nav-link {
+    color: #495057;
+    font-size: 0.95rem;
+    padding: 0.8rem 1.5rem;
+    transition: all 0.2s ease-in-out;
+    border-left: 4px solid transparent;
+    border-radius: 0 25px 25px 0;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.offcanvas .nav-link:hover {
+    background-color: #e9ecef;
+    color: var(--gw-primary);
+}
+.offcanvas .nav-link.active {
+    background-color: var(--gw-primary);
+    color: #ffffff;
+    border-left-color: var(--gw-warning);
+    font-weight: 700;
+}
+.offcanvas .nav-link .bi:first-child {
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+.offcanvas .nav-link .bi-chevron-down {
+    transition: transform 0.3s ease-in-out;
+}
+.offcanvas .nav-link .bi-chevron-down.rotate-180 {
+    transform: rotate(180deg);
+}
+.offcanvas .collapse .nav-link {
+    font-size: 0.9rem;
+    padding-left: 2rem;
+    color: var(--gw-secondary);
+}
+.offcanvas .collapse .nav-link:hover,
+.offcanvas .collapse .nav-link.active {
+    color: var(--gw-primary);
+    background-color: #e9ecef;
+    border-left-color: var(--gw-primary);
+}
+.offcanvas hr {
+    border-color: var(--gw-border-color) !important;
+}
+
+/* 5. CARD STYLING */
+.card {
+    border: 1px solid var(--gw-border-color);
+    border-radius: 0.75rem;
+    box-shadow: var(--gw-shadow);
+    transition: all 0.3s ease;
+    background-color: var(--gw-card-bg);
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.card-header {
+    background-color: var(--gw-light);
+    border-bottom: 1px solid var(--gw-border-color);
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.card-header .bi {
+    color: var(--gw-primary);
+    margin-right: 0.75rem;
+}
+
+/* 6. TABLE STYLING */
+.table thead th {
+    background-color: var(--gw-light);
+    border-bottom: 2px solid var(--gw-border-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    color: var(--gw-dark);
+    vertical-align: middle;
+}
+.table-hover > tbody > tr:hover > * {
+    background-color: #eef2f7;
+}
+
+/* 7. DASHBOARD SPECIFIC STYLES */
+.dashboard-card {
+    border-left: 5px solid;
+    transition: all 0.3s ease;
+}
+.dashboard-card.border-primary { border-color: var(--gw-primary) !important; }
+.dashboard-card.border-success { border-color: var(--gw-success) !important; }
+.dashboard-card.border-info { border-color: var(--gw-info) !important; }
+.dashboard-card.border-secondary { border-color: var(--gw-secondary) !important; }
+
+.dashboard-card .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dashboard-card .card-icon {
+    font-size: 3rem;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+}
+.dashboard-card:hover .card-icon {
+    opacity: 0.4;
+    transform: scale(1.1);
+}

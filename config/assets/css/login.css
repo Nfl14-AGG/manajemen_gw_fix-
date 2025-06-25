@@ -1,0 +1,186 @@
+/* /config/assets/css/login.css - Desain Baru */
+
+/* 1. Reset dan Pengaturan Body */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--gw-body-bg, #f4f7fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* 2. Container Utama */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* 3. Kotak Login Wrapper */
+.login-box {
+    display: flex;
+    width: 100%;
+    max-width: 1000px; /* Lebar maksimum kotak login */
+    min-height: 600px;
+    background-color: var(--gw-card-bg, #ffffff);
+    border-radius: 12px;
+    box-shadow: var(--gw-shadow, 0 4px 12px rgba(0, 0, 0, 0.08));
+    overflow: hidden;
+}
+
+/* 4. Sisi Formulir (Kiri) */
+.login-form-wrapper {
+    flex: 1;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-header {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.login-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gw-primary, #8B4513); /* Warna utama aplikasi */
+    margin-bottom: 5px;
+}
+
+.login-subtitle {
+    font-size: 1rem;
+    color: var(--gw-secondary, #6c757d);
+}
+
+/* 5. Grup Input (Label + Input) */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--gw-dark, #212529);
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon .bi {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 1.1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 45px; /* Padding kiri untuk ikon */
+    border: 1px solid var(--gw-border-color, #dee2e6);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--gw-primary, #8B4513);
+    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.15);
+}
+
+/* 6. Tombol Login */
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    background-color: var(--gw-primary, #8B4513);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-login:hover {
+    background-color: var(--gw-primary-hover, #A0522D);
+    transform: translateY(-2px);
+}
+
+/* 7. Pesan Error dan Validasi */
+.alert-login {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.input-group .is-invalid {
+    border-color: var(--gw-danger, #dc3545);
+}
+
+.invalid-feedback {
+    display: block;
+    color: var(--gw-danger, #dc3545);
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+
+/* 8. Sisi Gambar (Kanan) */
+.login-image-wrapper {
+    flex: 1;
+    display: flex;
+}
+
+.login-side-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa distorsi */
+}
+
+/* 9. Desain Responsif */
+@media (max-width: 992px) {
+    .login-box {
+        flex-direction: column;
+        min-height: auto;
+        max-width: 450px;
+    }
+
+    .login-image-wrapper {
+        height: 250px;
+        order: -1; /* Pindahkan gambar ke atas pada layar kecil */
+    }
+
+    .login-form-wrapper {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .login-form-wrapper {
+        padding: 30px 25px;
+    }
+
+    .login-title {
+        font-size: 2rem;
+    }
+}
