@@ -1,9 +1,10 @@
 <?php
 // Konfigurasi Database
-$host = 'localhost';
-$dbname = 'manajemen_stok_gudang_wearpack';
-$user = 'root'; // Default username XAMPP
-$pass = '';   // Default password XAMPP adalah kosong
+$host = 'gateway01.eu-central-1.prod.aws.tidbcloud.com';
+$dbname = 'test';
+$port ='4000';
+$user = '2aob43h9hiq6hQh.root'; // Default username XAMPP
+$pass = 'Mp3pEXOqknkPMyhu';   // Default password XAMPP adalah kosong
 
 // Opsi untuk koneksi PDO
 $options = [
